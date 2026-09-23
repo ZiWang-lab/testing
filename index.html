@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaboration Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="board">
+      <header>
+        <p class="eyebrow">GITHUB COLLABORATION DEMO</p>
+        <h1>Collaboration Board</h1>
+        <p class="subtitle">A small page for testing teamwork, branches, and merges.</p>
+      </header>
+
+      <section class="composer" aria-label="Add a task">
+        <input id="task-input" type="text" placeholder="Add a to-do item…" maxlength="80" />
+        <button id="add-task" type="button">Add task</button>
+      </section>
+
+      <section class="tasks" aria-live="polite">
+        <div class="section-heading">
+          <h2>Current tasks</h2>
+          <span id="progress">0 / 0 complete</span>
+        </div>
+        <ul id="task-list"></ul>
+      </section>
+
+      <footer>Tip: click the circle beside a task to toggle its completion status.</footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
