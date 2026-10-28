@@ -1,7 +1,7 @@
 :root {
   font-family: "Roboto", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #172033;
-  background: #f5f7fb;
+  background: #f7d5f0;
 }
 
 * { box-sizing: border-box; }
@@ -106,7 +106,7 @@ footer { margin-top: 27px; color: #8a94a6; font-size: .82rem; }
   to { transform: translateY(112vh) rotate(calc(var(--rotation) + 540deg)); opacity: 0; }
 }
 
-.completion-page { background: linear-gradient(135deg, #f5f7fb, #eef0ff); }
+.completion-page { background: #f7d5f0; }
 .completion-card {
   width: min(100%, 620px);
   padding: 52px 42px;
