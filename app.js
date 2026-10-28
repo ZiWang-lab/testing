@@ -13,6 +13,12 @@ const starterTasks = [
 let tasks = loadTasks();
 let isCelebrating = false;
 
+if (new URLSearchParams(window.location.search).has('clear-completed')) {
+  tasks = tasks.filter(task => !task.done);
+  saveTasks();
+  window.history.replaceState({}, '', window.location.pathname);
+}
+
 function loadTasks() {
   try {
     const savedTasks = JSON.parse(sessionStorage.getItem(storageKey));
@@ -49,8 +55,20 @@ function render() {
     });
 
     const label = document.createElement('span');
+    label.className = 'task-label';
     label.textContent = task.text;
-    item.append(toggle, label);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-task';
+    deleteButton.type = 'button';
+    deleteButton.setAttribute('aria-label', `Delete “${task.text}”`);
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', () => {
+      tasks.splice(index, 1);
+      render();
+    });
+
+    item.append(toggle, label, deleteButton);
     taskList.append(item);
   });
 
