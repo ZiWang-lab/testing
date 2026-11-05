@@ -98,7 +98,7 @@ function celebrateCompletion() {
   confetti.className = 'confetti-layer';
   confetti.setAttribute('aria-hidden', 'true');
 
-  const colors = ['#545bd8', '#f59e0b', '#ec4899', '#42a56b', '#38bdf8'];
+  const colors = ['#1e5b52', '#e59563', '#c95e3d', '#2d806f', '#f2c4a7'];
   for (let index = 0; index < 90; index += 1) {
     const piece = document.createElement('span');
     piece.className = 'confetti-piece';
